@@ -4,22 +4,38 @@
       "maxDuration": 60
     }
   },
-  "rewrites": [
+  "routes": [
     {
-      "source": "/api/v1/:path*",
-      "destination": "/api/index.js"
+      "src": "/api/v1/device",
+      "dest": "/api/index.js"
     },
     {
-      "source": "/v1/:path*",
-      "destination": "/api/index.js"
+      "src": "/v1/task",
+      "dest": "/api/index.js"
     },
     {
-      "source": "/api/:path*",
-      "destination": "/api/index.js"
+      "src": "/v1/task/complete",
+      "dest": "/api/index.js"
     },
     {
-      "source": "/(.*)",
-      "destination": "/api/index.js"
+      "src": "/api/devices",
+      "dest": "/api/index.js"
+    },
+    {
+      "src": "/api/tasks",
+      "dest": "/api/index.js"
+    },
+    {
+      "src": "/api/tasks/add",
+      "dest": "/api/index.js"
+    },
+    {
+      "src": "/api/stats",
+      "dest": "/api/index.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/api/index.js"
     }
   ]
 }
