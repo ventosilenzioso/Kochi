@@ -6,11 +6,15 @@
   },
   "rewrites": [
     {
-      "source": "/api/(.*)",
+      "source": "/api/v1/:path*",
       "destination": "/api/index.js"
     },
     {
-      "source": "/v1/(.*)",
+      "source": "/v1/:path*",
+      "destination": "/api/index.js"
+    },
+    {
+      "source": "/api/:path*",
       "destination": "/api/index.js"
     },
     {
